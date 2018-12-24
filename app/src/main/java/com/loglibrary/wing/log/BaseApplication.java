@@ -14,7 +14,10 @@ public class BaseApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        //初始化日志
         LogControl.init(getApplicationContext(),"bbb",true);
+        //设置日志本地包大小
+        LogControl.setLogSize(10);
 
     }
 }

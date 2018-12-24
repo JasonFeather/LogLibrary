@@ -1,6 +1,8 @@
 package com.feather;
 
 import android.content.Context;
+
+import com.feather.logcontrol.Common.Config;
 import com.feather.logcontrol.LogService;
 import com.feather.logcontrol.UnCeHandler;
 import com.feather.logcontrol.listener.LogState;
@@ -22,6 +24,14 @@ public class LogControl {
         if (isErrorLog) {
             UnCeHandler.getInstance().init(context, namePath);
         }
+    }
+
+    /**
+     * 修改日志本地大小 单位兆
+     * @param size
+     */
+    public static void setLogSize(int size){
+        Config.HPNS_LOG_MAX_FILE_SIZE=size*1024 * 1024;
     }
 
     public static LogService setLogDate(Class logState) {

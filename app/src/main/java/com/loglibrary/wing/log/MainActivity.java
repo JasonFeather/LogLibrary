@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.bt).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //使用日志  请在项目本地存储后申请否者无效
                 LogControl.setLogDate(ErrorLog.class).ShowLogAndWrite("dsjfkls", "skdfjls");
             }
         });
