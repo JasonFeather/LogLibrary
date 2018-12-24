@@ -17,6 +17,13 @@ import java.util.ArrayList;
 
 public class LogControl {
     private static LogService logService;
+
+    /**
+     *
+     * @param context
+     * @param namePath 项目的名称（本地sd卡项目路径）
+     * @param isErrorLog 是否显示错误日志
+     */
     public static void init(Context context, String namePath, boolean isErrorLog) {
         if (null == logService) {
             logService = new LogService(context, namePath, isErrorLog);
