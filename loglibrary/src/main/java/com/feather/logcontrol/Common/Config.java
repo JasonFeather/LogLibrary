@@ -14,5 +14,5 @@ public class Config {
     public static final SimpleDateFormat SDF2 = new SimpleDateFormat("MM-dd HH:mm:ss");
     public static  long HPNS_LOG_MAX_FILE_SIZE = 10 * 1024 * 1024;
     public static String basePath = Environment.getExternalStorageDirectory()
-            .toString() + "/hcbbug/";
+            .toString() + "/";
 }

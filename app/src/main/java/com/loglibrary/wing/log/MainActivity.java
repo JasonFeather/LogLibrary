@@ -8,6 +8,8 @@ import android.view.View;
 
 import com.feather.LogControl;
 import com.feather.State.ErrorLog;
+import com.feather.State.InfoLog;
+import com.feather.State.VerboseLog;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //使用日志  请在项目本地存储后申请否者无效
                 LogControl.setLogDate(ErrorLog.class).ShowLogAndWrite("dsjfkls", "skdfjls");
+                LogControl.setLogDate(InfoLog.class).ShowLogAndWrite("aaa", "aaaa");
+                LogControl.setLogDate(VerboseLog.class).ShowLogAndWrite("bbbb", "aaaa");
             }
         });
     }

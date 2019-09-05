@@ -23,7 +23,6 @@ public abstract class BaseLog {
 
     protected void setmLogState(Class mLogState) {
         try {
-            if (mLogState.equals(ErrorLog.class)) {
                 LogState logStateTemp = LogService.logStateMaps.get(mLogState);
                 if (logStateTemp != null) {
                     this.mLogState = logStateTemp;
@@ -33,7 +32,7 @@ public abstract class BaseLog {
                     this.mLogState.setPathName(mPathName, context);
                     LogService.logStateMaps.put(mLogState, logState);
                 }
-            }
+
         } catch (Exception e) {
             e.toString();
 
